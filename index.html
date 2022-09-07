@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="#">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+
+            body {padding:1em;}
+
+            .label-header {
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+            .form-control {
+                height: 10em;
+            }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="col-4">
+                <label class="label-header" for="uppercase">TEXT TO UPPER</label>
+                <textarea class="form-control text-uppercase" id="uppercase" spellcheck="false"></textarea>
+            </div>
+
+            <div class="col-4">
+                <label class="label-header" for="lowercase">text to lower</label>
+                <textarea class="form-control text-lowercase" id="lowercase" spellcheck="false"></textarea>
+            </div>
+
+            <div class="col-4">
+                <label class="label-header" for="lowercase">Capitalized</label>
+                <textarea class="form-control text-capitalize" id="lowercase" spellcheck="false"></textarea>
+            </div>   
+            
+            <div class="col-12">
+                <label class="label-header" for="convert">Convert tab to spaces</label>
+                <textarea class="form-control convert" id="convert" style="height: 500px;" oninput="removetab()" spellcheck="false"></textarea>
+            </div>               
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+
+        function removetab() {
+            var convert = document.getElementById('convert');
+            convert.value = convert.value.replace(/\t/g, ' ');
+        }
+
+    </script>
+</body>
+</html>
